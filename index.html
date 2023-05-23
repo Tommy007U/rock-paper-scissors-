@@ -4,27 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/styles.css">
+    <link rel="stylesheet" href="CSS/styles.css">
     <title>RockPaperScissors</title>
 </head>
 <body>
+    <header id="title">
+        <h1 class="header-title"> Rock Paper Scissor</h1>
+
+    </header> 
+    <div class="score-board">
+        <div id="user-label" class="badge">YOU   </div>
+        <div id="computer-label" class="badge"> COMPUTER  </div>
+        <span id="user-score">0</span><span id="computer-score">0</span> 
+    </div> 
+    <div class="result">
+        <p>Paper cover rock. You win!</p>
+    </div>
     <div id="selections">
-        <button class="selection" data-selection="Rock"><img src="/pics/rock.png" alt="ROCK" width="250px"></button>
-        <button class="selection" data-selection="Paper"><img src="/pics/paper.png" alt="PAPER"width="250px"></button>
-        <button class="selection" data-selection="Scissors"><img src="/pics/scissors.png" alt="SCISSORS" width="250px"></button>
+        <div class="selection-btn" id="R" data-selection="Rock"><img src="/pics/rock.png" alt="ROCK" width="200px" height="200"></div>
+        <div class="selection-btn" id="P"   data-selection="Paper"><img src="/pics/paper.png" alt="PAPER"width="200px" height="200"></div>
+        <div class="selection-btn" id="S" data-selection="Scissors"><img src="/pics/scissors.png" alt="SCISSORS" width="200px" height="200"></div>
+        
     </div>
-    <div class="results">
-        <div>
-            You
-            <span class="result-score">0</span>
-        </div>
-        <div>
-            Computer
-            <span class="result-score">0</span>
-        </div>
-   <!--<div class="result-selection.winner"><img src="/pics/rock.png" alt="rock" width="50px"></div>
-        <div class="result-selection"><img src="/pics/paper.png" alt="paper" width="50px"></div> -->
-    </div>
-  <script src="/JS/script.js"></script>  
+    <p id="action-msg">Pick Your Selection</p>
+   
+    <footer>
+        <p>Scripted by Tommy 702</p>
+    </footer>
+  <script src="JS/script.js" charset="UTF-8"></script>  
 </body>
 </html>

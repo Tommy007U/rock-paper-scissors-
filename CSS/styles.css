@@ -1,43 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
-    background-color: lightgray;
+    background-color: #24272E;
+}
+#title{
+    display: flex;
+    border: 3px solid white;
+    border-radius: 5px;
+    justify-content: center; 
+    color: olive;
+    padding: 15px;
+    font-family:Asap, sans-serif;
+}
+.green-glow{
+    border: 4px solid #4dcc7d;
+    box-shadow: 0 0 10px #31b43a;
+}
+.red-glow{
+    border:4ps solid#fc1215;
+    box-shadow: 0 0 10px #d01115;
+}
+.gray-glow{
+    border:4px solid #232731;
+    box-shadow:0 0 10px #282a2e;
 }
 #selections{
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    border: 0.5px solid gray;
+    padding: 45px;
+    border-radius: 5px;
+    margin: 16px;
 }
-.selection{ 
-    background: none;
-    border: none;
-    outline: none;
+#action-msg{
+    text-align: center;
+    color: antiquewhite;
+    font-family: Asap sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+.selection-btn{ 
+    display: inline-block;
+    background-color: #24272E;
+   /** outline: none;*/
+   margin: 0 20px;
     cursor: pointer;
     font-size: 2rem;
-    transition: 100ms;
-   
-    
+    transition:all 0.3ms easy;    
 }
-.selection:hover{
+.selection, img{
+    border: 4px solid whitesmoke;
+    border-radius: 50%;
+}
+.selection-btn:hover{
     transform: scale(1.1);
+    background: linear-gradient(150deg, gray, coral, khaki,  blue, maroon, green, orange, red, purple);
+    transition-timing-function: easy-in;
+    border-radius: 45%;
+    cursor: pointer;
 }
-.results{
+.score-board{
     
     display: grid;
+    border: 1px solid whitesmoke;
+    border-radius: 4px;
+    color:burlywood;
     justify-content: center;
     grid-template-columns: repeat(2, 1fr);
     padding: 25px;
     justify-items: center;
     align-items: center;
+    font-family: Asap, sans-serif;
     font-size: 2rem;
+    margin: 5px;
 }
-.result-score{
+.score-board, span{
+    justify-content: center;
     margin-left: 1rem;
     font-size: 2rem;
-    color: #333;
+    color: #f3f9fc;
 }
-.result-selection{
+.user-score, .computer-score{
     opacity: .5;
 }
-.result-selection.winner{
+.score-board, .badge{
     opacity: 1;
     font-size: 1.5rem;
+}
+.result p{
+    color: antiquewhite;
+    text-align: center;
+    font-family: Asap sans-serif;
+    font-size: 16px;
+    font-weight: bold;
 
 }
+footer{
+    display: flex;
+    justify-content: end;
+    background: linear-gradient(150deg, blue,coral, gray, navy, green, orange, red, purple);
+    color:lemonchiffon;
+
+}
+/**p{
+    margin-bottom: 50px;
+    
+}*/
