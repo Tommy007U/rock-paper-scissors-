@@ -56,7 +56,6 @@ body{
 }
 .selection-btn:hover{
     transform: scale(1.1);
-    background: linear-gradient(150deg, gray, coral, khaki,  blue, maroon, green, orange, red, purple);
     transition-timing-function: easy-in;
     border-radius: 45%;
     cursor: pointer;
@@ -100,7 +99,7 @@ body{
 footer{
     display: flex;
     justify-content: end;
-    background: linear-gradient(150deg, blue,coral, gray, navy, green, orange, red, purple);
+    /**background: linear-gradient(150deg, blue,coral, gray, navy, green, orange, red, purple);*/
     color:lemonchiffon;
 
 }
