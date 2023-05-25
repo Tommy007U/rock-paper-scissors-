@@ -1,10 +1,9 @@
 let userScore = 0;
 let computerScore = 0;
 // create variables that will be used on the project
-let userScore_span = document.getElementById("user-score");
-let computerScore_span = document.getElementById("computer-score");
-const scoreBoard_div =document.querySelector(".score-board");
-const result_div = document.querySelector(".result > p");
+let userScore_span = document.querySelector("#user-score");
+let computerScore_span = document.querySelector("#computer-score");
+let result_div = document.querySelector(".result > p");
 const select_div = document.querySelector("#selections");
 const rock_div = document.getElementById("R");
 const paper_div = document.getElementById("P");
@@ -21,7 +20,7 @@ function win(userChoice, computerChoice){
   userScore++;
   userScore_span.innerHTML=userScore;
   computerScore_span.innerHTML = computerScore;
-  // add 2 variab to mention picks of players
+  // add 2 variab to specify  the picks of players
   let smallUserWord = "user".fontsize(2).sub();
   let smallCompWord = "comp".fontsize(2).sub();  
   //result_div.innerHTML=userChoice + " beats " + computerChoice + " . You win"; or 
@@ -32,9 +31,8 @@ function win(userChoice, computerChoice){
 }
 function lose(userChoice, computerChoice){
   computerScore++;
-  userScore.innerHTML= userScore
+  userScore_span.innerHTML= userScore
   computerScore_span.innerHTML=computerScore;
-  userScore_span = userScore;
   
   let smallUserWord = "user".fontsize(2).sub();
   let smallCompWord = "comp".fontsize(2).sub();
@@ -43,15 +41,10 @@ function lose(userChoice, computerChoice){
 }
 
 function draw(userChoice, computerChoice){
-
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
-  
-  /**let smallUserWord = "user".fontsize(2).sub();
-  let smallCompWord = "comp".fontsize(2).sub();*/
-   
+     
    result_div.innerHTML = `${userChoice} equal to ${computerChoice} . Its a draw !!`
-
 }
 // testconsole.log(getComputerChoice());
 
@@ -59,8 +52,9 @@ function draw(userChoice, computerChoice){
 function game(userChoice){
   //console.log("there you go!" + userChoice);
   const computerChoice = getComputerChoice();
-  //console.log("user choice => " + userChoice)
-  //console.log("computer choice => " + computerChoice); 
+  
+    //console.log("user choice => " + userChoice) console.log("computer choice => " + computerChoice)
+
   //switch statement to pick win n loose or draw
   switch( userChoice + computerChoice){
      case "RockScissors":
