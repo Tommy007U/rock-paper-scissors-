@@ -5,9 +5,9 @@ let userScore_span = document.querySelector("#user-score");
 let computerScore_span = document.querySelector("#computer-score");
 let result_div = document.querySelector(".result > p");
 const select_div = document.querySelector("#selections");
-const rock_div = document.getElementById("R");
-const paper_div = document.getElementById("P");
-const scissors_div = document.getElementById("S");
+const rock_div = document.querySelector("#R");
+const paper_div = document.querySelector("#P");
+const scissors_div = document.querySelector("#S");
 
 // f(x) cptrchoice that will give random nbr
 
@@ -52,7 +52,7 @@ function draw(userChoice, computerChoice){
 function game(userChoice){
   //console.log("there you go!" + userChoice);
   const computerChoice = getComputerChoice();
-  
+
     //console.log("user choice => " + userChoice) console.log("computer choice => " + computerChoice)
 
   //switch statement to pick win n loose or draw
@@ -82,7 +82,7 @@ function main(){
    rock_div.addEventListener("click", (e)=>{
     //console.log(" you click on Rock");
     //function game to  
-   // game("Rock")
+   game("Rock")
   });
  
    paper_div.addEventListener("click", (e)=>{
